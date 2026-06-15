@@ -1,6 +1,15 @@
-/* =========================
+/* ==========================
    ADVENTURE CLUB AUSTRALIA
-========================= */
+========================== */
+
+:root{
+    --gold:#c6a15b;
+    --dark-gold:#9a762d;
+    --black:#111111;
+    --cream:#f8f6f2;
+    --white:#ffffff;
+    --grey:#666666;
+}
 
 *{
     margin:0;
@@ -8,254 +17,281 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
+    background:var(--cream);
     color:#222;
-    background:#ffffff;
     line-height:1.6;
 }
 
-/* =========================
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ==========================
    HEADER
-========================= */
+========================== */
 
 header{
-    background:#fff;
-    padding:20px 5%;
+    background:white;
+    border-bottom:2px solid var(--gold);
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.header-inner{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid #e5e5e5;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    padding:15px 0;
 }
 
 .header-logo{
-    height:80px;
+    height:70px;
     width:auto;
 }
 
 nav{
     display:flex;
-    gap:25px;
+    gap:20px;
 }
 
 nav a{
-    text-decoration:none;
-    color:#222;
-    font-weight:600;
-    transition:0.3s;
+    color:#111;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:0.5px;
 }
 
 nav a:hover{
-    color:#b78b2d;
+    color:var(--dark-gold);
 }
 
-/* =========================
-   HERO
-========================= */
+/* ==========================
+   HERO SECTION
+========================== */
 
 .hero{
-    min-height:80vh;
+    min-height:85vh;
     display:flex;
-    justify-content:center;
     align-items:center;
-    text-align:center;
-    padding:80px 20px;
-    background:linear-gradient(
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.35)
-    ),
-    url("IMG_5712.png");
+    position:relative;
     background-size:cover;
     background-position:center;
     color:white;
 }
 
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+}
+
 .hero-content{
-    max-width:800px;
+    position:relative;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
 .hero h1{
-    font-size:clamp(42px,7vw,90px);
-    margin-bottom:20px;
+    font-size:clamp(48px,8vw,100px);
+    line-height:0.95;
+    margin-bottom:25px;
 }
 
 .hero p{
     font-size:22px;
-    margin-bottom:30px;
+    max-width:750px;
+    margin-bottom:25px;
+    color:#f5f5f5;
 }
 
-/* =========================
-   PAGE HERO
-========================= */
-
-.page-hero{
-    padding:100px 20px;
-    text-align:center;
-    background:#f8f8f8;
-}
-
-.page-hero h1{
-    font-size:clamp(38px,6vw,72px);
-    margin-bottom:20px;
-}
-
-.page-hero p{
-    max-width:700px;
-    margin:auto;
-    font-size:20px;
-}
-
-/* =========================
+/* ==========================
    BUTTONS
-========================= */
+========================== */
 
 .btn{
     display:inline-block;
-    background:#b78b2d;
-    color:white;
-    text-decoration:none;
-    padding:16px 34px;
-    border-radius:8px;
-    font-weight:bold;
+    background:var(--gold);
+    color:#111;
+    padding:16px 32px;
+    border-radius:50px;
+    font-weight:700;
+    border:2px solid var(--gold);
     transition:0.3s;
-    border:none;
-    cursor:pointer;
 }
 
 .btn:hover{
-    background:#967022;
+    transform:translateY(-3px);
 }
 
-.btn-small{
+.btn-secondary{
     display:inline-block;
-    background:#b78b2d;
+    background:transparent;
     color:white;
-    text-decoration:none;
-    padding:12px 24px;
-    border-radius:8px;
-    margin-top:15px;
-    font-weight:600;
+    padding:16px 32px;
+    border-radius:50px;
+    font-weight:700;
+    border:2px solid white;
+    margin-left:15px;
 }
 
-/* =========================
-   CONTAINERS
-========================= */
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px;
-}
+/* ==========================
+   GENERAL SECTIONS
+========================== */
 
 section{
     padding:80px 0;
 }
 
-h2{
-    text-align:center;
-    margin-bottom:30px;
-    font-size:42px;
-}
-
-/* =========================
-   INTRO
-========================= */
-
-.intro-section p{
-    max-width:900px;
+.container{
+    width:90%;
+    max-width:1200px;
     margin:auto;
+}
+
+.section-title{
     text-align:center;
-    font-size:20px;
+    margin-bottom:50px;
 }
 
-/* =========================
-   FLEET
-========================= */
-
-.fleet-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
+.section-title h2{
+    font-size:50px;
+    margin-bottom:15px;
 }
 
-.fleet-card{
+.section-title p{
+    max-width:800px;
+    margin:auto;
+}
+
+/* ==========================
+   GOLD BOXES
+========================== */
+
+.gold-box{
     background:white;
-    border:2px solid #b78b2d;
-    border-radius:20px;
+    border:2px solid var(--gold);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border:2px solid var(--gold);
+    border-radius:25px;
     overflow:hidden;
-    box-shadow:0 8px 30px rgba(0,0,0,0.08);
-    transition:0.3s;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
 
-.fleet-card:hover{
-    transform:translateY(-6px);
-}
-
-.fleet-card img{
+.card img{
     width:100%;
-    height:320px;
+    height:350px;
     object-fit:cover;
 }
 
 .card-content{
-    padding:25px;
+    padding:30px;
 }
 
-.card-content h3{
-    margin-bottom:10px;
-    font-size:30px;
+.card h3{
+    margin-bottom:15px;
+    font-size:32px;
 }
 
-/* =========================
-   GALLERY
-========================= */
+/* ==========================
+   STATS COUNTERS
+========================== */
 
-.gallery-grid{
+.stats-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
 }
 
-.gallery-grid img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:18px;
+.stat-box{
+    background:white;
+    border:2px solid var(--gold);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
 }
 
-/* =========================
-   GOLD BOX
-========================= */
-
-.gold-box{
-    border:2px solid #b78b2d;
-    padding:35px;
-    border-radius:20px;
-    margin:40px 0;
-    background:#fffdf8;
+.stat-number{
+    font-size:48px;
+    font-weight:800;
+    color:var(--gold);
 }
 
-.gold-box h3{
+.stat-title{
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-top:10px;
+}
+
+/* ==========================
+   ROADMAP
+========================== */
+
+.roadmap{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.roadmap-item{
+    background:white;
+    border:2px solid var(--gold);
+    border-radius:25px;
+    padding:30px;
+}
+
+.roadmap-item h3{
+    color:var(--dark-gold);
     margin-bottom:15px;
 }
 
-/* =========================
-   FEATURES
-========================= */
+/* ==========================
+   FEATURE GRID
+========================== */
 
 .feature-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
-    margin-top:30px;
 }
 
 .feature-card{
     background:white;
-    border:2px solid #b78b2d;
+    border:2px solid var(--gold);
     border-radius:20px;
     padding:25px;
 }
@@ -264,59 +300,71 @@ h2{
     margin-bottom:10px;
 }
 
-/* =========================
-   CONTENT
-========================= */
+/* ==========================
+   GALLERY
+========================== */
 
-.content-section p{
-    margin-bottom:25px;
-    font-size:18px;
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.content-section h2{
-    text-align:left;
+.gallery-grid img{
+    height:300px;
+    width:100%;
+    object-fit:cover;
+    border-radius:20px;
+    border:2px solid var(--gold);
 }
 
-/* =========================
-   CTA
-========================= */
-
-.cta-section{
-    text-align:center;
-    background:#f7f7f7;
-}
-
-.cta-section p{
-    max-width:700px;
-    margin:20px auto;
-}
-
-/* =========================
-   FORM
-========================= */
+/* ==========================
+   FORMS
+========================== */
 
 .join-form{
     max-width:700px;
-    margin:40px auto 0;
+    margin:auto;
 }
 
 .join-form input,
-.join-form textarea{
+.join-form textarea,
+.join-form select{
     width:100%;
     padding:16px;
     margin-bottom:15px;
+    border-radius:10px;
     border:1px solid #ddd;
-    border-radius:8px;
     font-size:16px;
 }
 
 .join-form button{
     width:100%;
+    border:none;
 }
 
-/* =========================
+/* ==========================
+   DARK SECTION
+========================== */
+
+.dark-section{
+    background:#111;
+    color:white;
+}
+
+.dark-section p{
+    color:#ddd;
+}
+
+.dark-section .gold-box,
+.dark-section .feature-card,
+.dark-section .stat-box{
+    background:rgba(255,255,255,0.04);
+}
+
+/* ==========================
    FOOTER
-========================= */
+========================== */
 
 footer{
     background:#111;
@@ -326,50 +374,56 @@ footer{
 }
 
 .footer-logo{
-    width:220px;
+    width:250px;
     max-width:80%;
-    margin-bottom:25px;
+    margin:0 auto 25px;
 }
 
 footer h3{
     margin-bottom:10px;
 }
 
-/* =========================
+footer p{
+    color:#ccc;
+}
+
+/* ==========================
    MOBILE
-========================= */
+========================== */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-    header{
+    .header-inner{
         flex-direction:column;
-        gap:20px;
     }
 
     nav{
         flex-wrap:wrap;
         justify-content:center;
-        gap:15px;
     }
 
-    .header-logo{
-        height:65px;
-    }
-
-    h2{
-        font-size:34px;
+    .cards,
+    .stats-grid,
+    .roadmap,
+    .feature-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
     }
 
     .hero h1{
-        font-size:52px;
+        font-size:56px;
     }
 
     .hero p{
         font-size:18px;
     }
 
-    .fleet-card img{
-        height:250px;
+    .btn,
+    .btn-secondary{
+        display:block;
+        width:100%;
+        text-align:center;
+        margin:10px 0;
     }
 
 }
