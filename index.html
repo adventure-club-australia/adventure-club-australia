@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adventure Club Australia</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; color: #111; background: #fff; }
+    header { padding: 24px 6%; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 800; letter-spacing: 2px; }
+    nav a { margin-left: 20px; color: #111; text-decoration: none; font-weight: 600; }
+    .hero { min-height: 85vh; background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("IMG_5771.jpeg") center/cover; color: white; display: flex; align-items: center; padding: 6%; }
+    .hero h1 { font-size: clamp(42px, 8vw, 96px); line-height: .95; max-width: 900px; }
+    .hero p { margin-top: 24px; font-size: 22px; max-width: 650px; }
+    .btn { display: inline-block; margin-top: 32px; padding: 16px 28px; background: white; color: #111; text-decoration: none; font-weight: 800; border-radius: 40px; }
+    section { padding: 80px 6%; }
+    .intro { max-width: 900px; }
+    h2 { font-size: 42px; margin-bottom: 20px; }
+    p { font-size: 18px; line-height: 1.6; }
+    .fleet { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 36px; }
+    .card { border: 1px solid #ddd; border-radius: 22px; overflow: hidden; background: #fff; }
+    .card img { width: 100%; height: 320px; object-fit: cover; display: block; }
+    .card div { padding: 26px; }
+    .dark { background: #111; color: white; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 36px; }
+    .step { border: 1px solid #333; padding: 28px; border-radius: 18px; }
+    form { max-width: 560px; margin: 30px auto 0; display: grid; gap: 14px; }
+    input, textarea { padding: 16px; border-radius: 12px; border: none; font-size: 16px; }
+    button { padding: 16px; border-radius: 40px; border: none; font-weight: 800; cursor: pointer; }
+    footer { padding: 40px 6%; text-align: center; background: #f4f4f4; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ADVENTURE CLUB AUSTRALIA</div>
+  <nav>
+    <a href="#fleet">Fleet</a>
+    <a href="#founding">Join</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Australia’s Shared Adventure Fleet</h1>
+    <p>Own the Adventure. Share the Journey.</p>
+    <a class="btn" href="#founding">Join the Founding Member Waitlist</a>
+  </div>
+</section>
+
+<section>
+  <div class="intro">
+    <h2>Adventure without the full cost of ownership.</h2>
+    <p>Adventure Club Australia is a community-powered adventure club giving everyday Australians access to unique travel, camping and off-road vehicles. From retro coastal escapes to full off-grid expedition builds, every membership helps grow the fleet and create unforgettable getaways.</p>
+  </div>
+</section>
+
+<section id="fleet">
+  <h2>Current Fleet</h2>
+  <div class="fleet">
+    <div class="card">
+      <img src="IMG_5772.jpeg" alt="Bedbug retro camper">
+      <div>
+        <h3>Bedbug</h3>
+        <p>Retro Coastal Escape. Perfect for weekend getaways, caravan parks, coffee mornings and relaxed sealed-road adventures.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IMG_5771.jpeg" alt="Toyota Troopie">
+      <div>
+        <h3>VDJ78 Troopie</h3>
+        <p>Ultimate Expedition. A fully self-sustainable off-grid build made for long trips, beach camping and remote adventure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step"><h3>1. Join</h3><p>Become part of the Adventure Club community.</p></div>
+    <div class="step"><h3>2. Build Credits</h3><p>Membership credits help unlock future trips.</p></div>
+    <div class="step"><h3>3. Book</h3><p>Choose the vehicle that suits your adventure.</p></div>
+    <div class="step"><h3>4. Explore</h3><p>Get outside and create memories.</p></div>
+  </div>
+</section>
+
+<section id="founding" class="dark">
+  <h2>Founding Members Coming Soon</h2>
+  <p>Be one of the first 100 people to help shape Adventure Club Australia.</p>
+  <form>
+    <input type="text" placeholder="Your name">
+    <input type="email" placeholder="Your email">
+    <textarea placeholder="Tell us what kind of adventure you’re interested in"></textarea>
+    <button type="button">Join the Waitlist</button>
+  </form>
+</section>
+
+<footer>
+  <p>Adventure Club Australia © 2026</p>
+</footer>
+
+</body>
+</html>
