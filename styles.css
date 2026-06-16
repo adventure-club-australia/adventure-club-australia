@@ -1,429 +1,302 @@
-/* ==========================
-   ADVENTURE CLUB AUSTRALIA
-========================== */
+/* ===== GLOBAL ===== */
 
-:root{
-    --gold:#c6a15b;
-    --dark-gold:#9a762d;
-    --black:#111111;
-    --cream:#f8f6f2;
-    --white:#ffffff;
-    --grey:#666666;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+html {
+  scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior:smooth;
+body {
+  background: #0f0f0f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:var(--cream);
-    color:#222;
-    line-height:1.6;
+/* ===== CONTAINER ===== */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-img{
-    max-width:100%;
-    display:block;
+/* ===== HEADER ===== */
+
+header {
+  background: #111;
+  border-bottom: 2px solid #d4af37;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-a{
-    text-decoration:none;
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
 }
 
-/* ==========================
-   HEADER
-========================== */
-
-header{
-    background:white;
-    border-bottom:2px solid var(--gold);
-    position:sticky;
-    top:0;
-    z-index:999;
+.header-logo {
+  height: 65px;
 }
 
-.header-inner{
-    width:92%;
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
+nav {
+  display: flex;
+  gap: 25px;
 }
 
-.header-logo{
-    height:70px;
-    width:auto;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-nav{
-    display:flex;
-    gap:20px;
+nav a:hover {
+  color: #d4af37;
 }
 
-nav a{
-    color:#111;
-    font-weight:700;
-    text-transform:uppercase;
-    font-size:14px;
-    letter-spacing:0.5px;
+/* ===== HERO ===== */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-nav a:hover{
-    color:var(--dark-gold);
+.hero-content {
+  max-width: 850px;
 }
 
-/* ==========================
-   HERO SECTION
-========================== */
-
-.hero{
-    min-height:85vh;
-    display:flex;
-    align-items:center;
-    position:relative;
-    background-size:cover;
-    background-position:center;
-    color:white;
+.eyebrow {
+  color: #d4af37;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.55);
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
 }
 
-.hero-content{
-    position:relative;
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+.hero p {
+  font-size: 1.25rem;
+  max-width: 750px;
+  margin: auto;
+  margin-bottom: 35px;
 }
 
-.hero h1{
-    font-size:clamp(48px,8vw,100px);
-    line-height:0.95;
-    margin-bottom:25px;
+/* ===== BUTTONS ===== */
+
+.btn {
+  display: inline-block;
+  background: #d4af37;
+  color: black;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+  transition: 0.3s;
 }
 
-.hero p{
-    font-size:22px;
-    max-width:750px;
-    margin-bottom:25px;
-    color:#f5f5f5;
+.btn:hover {
+  transform: translateY(-3px);
 }
 
-/* ==========================
-   BUTTONS
-========================== */
-
-.btn{
-    display:inline-block;
-    background:var(--gold);
-    color:#111;
-    padding:16px 32px;
-    border-radius:50px;
-    font-weight:700;
-    border:2px solid var(--gold);
-    transition:0.3s;
+.btn-secondary {
+  display: inline-block;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
+/* ===== SECTIONS ===== */
+
+section {
+  padding: 90px 0;
 }
 
-.btn-secondary{
-    display:inline-block;
-    background:transparent;
-    color:white;
-    padding:16px 32px;
-    border-radius:50px;
-    font-weight:700;
-    border:2px solid white;
-    margin-left:15px;
+.dark-section {
+  background: #171717;
 }
 
-/* ==========================
-   GENERAL SECTIONS
-========================== */
-
-section{
-    padding:80px 0;
+.section-title {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 60px;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+.section-title h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
+.section-title p {
+  color: #bdbdbd;
 }
 
-.section-title h2{
-    font-size:50px;
-    margin-bottom:15px;
+/* ===== GOLD BOX ===== */
+
+.gold-box {
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  padding: 40px;
+  background: #111;
 }
 
-.section-title p{
-    max-width:800px;
-    margin:auto;
+/* ===== FEATURES ===== */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
 }
 
-/* ==========================
-   GOLD BOXES
-========================== */
-
-.gold-box{
-    background:white;
-    border:2px solid var(--gold);
-    border-radius:25px;
-    padding:35px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+.feature-card {
+  background: #1b1b1b;
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  padding: 30px;
 }
 
-/* ==========================
-   CARDS
-========================== */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: #d4af37;
 }
 
-.card{
-    background:white;
-    border:2px solid var(--gold);
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+/* ===== VEHICLE CARDS ===== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  gap: 30px;
 }
 
-.card img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
+.card {
+  background: #171717;
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.card-content{
-    padding:30px;
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
-.card h3{
-    margin-bottom:15px;
-    font-size:32px;
+.card-content {
+  padding: 25px;
 }
 
-/* ==========================
-   STATS COUNTERS
-========================== */
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
+.card-content h3 {
+  margin-bottom: 15px;
+  color: #d4af37;
 }
 
-.stat-box{
-    background:white;
-    border:2px solid var(--gold);
-    border-radius:25px;
-    padding:30px;
-    text-align:center;
+.card-content p {
+  margin-bottom: 25px;
 }
 
-.stat-number{
-    font-size:48px;
-    font-weight:800;
-    color:var(--gold);
+/* ===== STATS ===== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
 }
 
-.stat-title{
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    margin-top:10px;
+.stat-box {
+  background: #171717;
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
 }
 
-/* ==========================
-   ROADMAP
-========================== */
-
-.roadmap{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
+.stat-number {
+  font-size: 2.5rem;
+  color: #d4af37;
+  font-weight: bold;
 }
 
-.roadmap-item{
-    background:white;
-    border:2px solid var(--gold);
-    border-radius:25px;
-    padding:30px;
+.stat-title {
+  margin-top: 10px;
 }
 
-.roadmap-item h3{
-    color:var(--dark-gold);
-    margin-bottom:15px;
+/* ===== FOOTER ===== */
+
+footer {
+  background: #111;
+  border-top: 2px solid #d4af37;
+  text-align: center;
+  padding: 50px 20px;
 }
 
-/* ==========================
-   FEATURE GRID
-========================== */
-
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.footer-logo {
+  height: 80px;
+  margin-bottom: 20px;
 }
 
-.feature-card{
-    background:white;
-    border:2px solid var(--gold);
-    border-radius:20px;
-    padding:25px;
+footer h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
 }
 
-.feature-card h3{
-    margin-bottom:10px;
-}
+/* ===== MOBILE ===== */
 
-/* ==========================
-   GALLERY
-========================== */
+@media (max-width: 768px) {
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-.gallery-grid img{
-    height:300px;
-    width:100%;
-    object-fit:cover;
-    border-radius:20px;
-    border:2px solid var(--gold);
-}
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 
-/* ==========================
-   FORMS
-========================== */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 
-.join-form{
-    max-width:700px;
-    margin:auto;
-}
+  .hero p {
+    font-size: 1rem;
+  }
 
-.join-form input,
-.join-form textarea,
-.join-form select{
-    width:100%;
-    padding:16px;
-    margin-bottom:15px;
-    border-radius:10px;
-    border:1px solid #ddd;
-    font-size:16px;
-}
+  .section-title h2 {
+    font-size: 2rem;
+  }
 
-.join-form button{
-    width:100%;
-    border:none;
-}
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-/* ==========================
-   DARK SECTION
-========================== */
+  .card img {
+    height: 250px;
+  }
 
-.dark-section{
-    background:#111;
-    color:white;
-}
-
-.dark-section p{
-    color:#ddd;
-}
-
-.dark-section .gold-box,
-.dark-section .feature-card,
-.dark-section .stat-box{
-    background:rgba(255,255,255,0.04);
-}
-
-/* ==========================
-   FOOTER
-========================== */
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.footer-logo{
-    width:250px;
-    max-width:80%;
-    margin:0 auto 25px;
-}
-
-footer h3{
-    margin-bottom:10px;
-}
-
-footer p{
-    color:#ccc;
-}
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:900px){
-
-    .header-inner{
-        flex-direction:column;
-    }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .cards,
-    .stats-grid,
-    .roadmap,
-    .feature-grid,
-    .gallery-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:56px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .btn,
-    .btn-secondary{
-        display:block;
-        width:100%;
-        text-align:center;
-        margin:10px 0;
-    }
-
+  .header-logo {
+    height: 50px;
+  }
 }
